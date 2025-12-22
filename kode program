@@ -1,0 +1,62 @@
+package main
+
+import "fmt"
+
+func main() {
+	var pemasukan int
+	var makan, pakaian, kebutuhan, transportasi, kesehatan int
+	var totalPengeluaran, sisa, targetHemat int
+	var ulang string
+
+	for {
+		fmt.Println("\nCATATAN KEUANGAN HARIAN")
+
+		fmt.Print("\nUangmu berapa? ")
+		fmt.Scan(&pemasukan)
+
+		fmt.Print("\nTarget pengeluaranmu hari ini? ")
+		fmt.Scan(&targetHemat)
+
+		fmt.Println("\nPakai uangnya buat apa aja? ")
+		fmt.Print("Makan        : ")
+		fmt.Scan(&makan)
+
+		fmt.Print("Pakaian      : ")
+		fmt.Scan(&pakaian)
+
+		fmt.Print("Kebutuhan    : ")
+		fmt.Scan(&kebutuhan)
+
+		fmt.Print("Transportasi : ")
+		fmt.Scan(&transportasi)
+
+		fmt.Print("Kesehatan    : ")
+		fmt.Scan(&kesehatan)
+
+		totalPengeluaran = makan + pakaian + kebutuhan + transportasi + kesehatan
+		sisa = pemasukan - totalPengeluaran
+
+		fmt.Println("\nMari hitung sisa uang kamu")
+		fmt.Println("Gajimu            :", pemasukan)
+		fmt.Println("Pengeluaranmu     :", totalPengeluaran)
+		fmt.Println("Target kamu       :" , targetHemat)
+		fmt.Println("Yang tersisa      :", sisa)
+
+		if totalPengeluaran > targetHemat {
+			fmt.Println("duh kamu boros banget kak")
+		} else if totalPengeluaran <= targetHemat {
+			fmt.Println("hebat, kamu hemat")
+		} else {
+			fmt.Println("huft, masih normal")
+		}
+
+		fmt.Print("\nInput hari berikutnya? (y/n): ")
+		fmt.Scan(&ulang)
+
+		if ulang != "y" && ulang != "Y" {
+			break
+		}
+	}
+
+	fmt.Println("\nATUR KEUANGANMU SEKARANG, AGAR TIDAK MENDERITA DIMASA TUA")
+}
