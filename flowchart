@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="flowchart tubes"/>
+        <attribute name="authors" value="user"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-12-22 11:05:30 AM"/>
+        <attribute name="created" value="dXNlcjtERVNLVE9QLUVBMjdFRFM7MjAyNS0xMi0yMjswODoyOToxNSBBTTsyNzU5"/>
+        <attribute name="edited" value="dXNlcjtERVNLVE9QLUVBMjdFRFM7MjAyNS0xMi0yMjsxMTowNTozMCBBTTsxOzI4NTI="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;CATATAN KEUANGAN HARIAN&quot;" newline="True"/>
+            <output expression="&quot;Uangmu berapa? &quot;" newline="True"/>
+            <declare name="pemasukan" type="Integer" array="False" size=""/>
+            <input variable="pemasukan"/>
+            <declare name="target" type="String" array="False" size=""/>
+            <output expression="&quot;Target pengeluaranmu hari ini? &quot;" newline="True"/>
+            <declare name="targetHemat" type="Integer" array="False" size=""/>
+            <input variable="targetHemat"/>
+            <output expression="&quot;Pengeluaranmu hari ini&quot;" newline="True"/>
+            <output expression="&quot;makan:&quot;" newline="True"/>
+            <declare name="makan" type="Integer" array="False" size=""/>
+            <input variable="makan"/>
+            <output expression="&quot;pakaian:&quot;" newline="True"/>
+            <declare name="pakaian" type="Integer" array="False" size=""/>
+            <input variable="pakaian"/>
+            <output expression="&quot;kebutuhan:&quot;" newline="True"/>
+            <declare name="kebutuhan" type="Integer" array="False" size=""/>
+            <input variable="kebutuhan"/>
+            <output expression="&quot;transportasi:&quot;" newline="True"/>
+            <declare name="transportasi" type="Integer" array="False" size=""/>
+            <input variable="transportasi"/>
+            <output expression="&quot;kesehatan:&quot;" newline="True"/>
+            <declare name="kesehatan" type="Integer" array="False" size=""/>
+            <input variable="kesehatan"/>
+            <declare name="totalPengeluaran, sisa" type="Integer" array="False" size=""/>
+            <assign variable="totalPengeluaran" expression="makan + pakaian + kebutuhan + transportasi + kesehatan"/>
+            <assign variable="sisa" expression="pemasukan - totalPengeluaran"/>
+            <output expression="&quot;Uang awal kamu:&quot; &amp;pemasukan" newline="True"/>
+            <output expression="&quot;total pengeluaranmu:&quot; &amp;totalPengeluaran" newline="True"/>
+            <output expression="&quot;target pengeluaran hari ini:&quot; &amp;targetHemat" newline="True"/>
+            <output expression="&quot;sisa uangmu:&quot; &amp;sisa" newline="True"/>
+            <if expression="totalPengeluaran &gt; targetHemat">
+                <then>
+                    <output expression="&quot;duh kamu boros banget kak&quot;" newline="True"/>
+                </then>
+                <else>
+                    <if expression="totalPengeluaran &lt;= targetHemat">
+                        <then>
+                            <output expression="&quot;hebat, kamu hemat&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;huft, masih normal&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
