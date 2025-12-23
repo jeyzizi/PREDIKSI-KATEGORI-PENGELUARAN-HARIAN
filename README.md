@@ -1,2 +1,1 @@
 # PREDIKSI-KATEGORI-PENGELUARAN-HARIAN
-![alt text](https://github.com/jeyzizi/PREDIKSI-KATEGORI-PENGELUARAN-HARIAN/blob/main/Screenshot%202025-12-23%20180837.png?raw=true)
