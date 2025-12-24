@@ -39,12 +39,12 @@ func main() {
 		fmt.Println("\nMari hitung sisa uang kamu")
 		fmt.Println("Gajimu            :", pemasukan)
 		fmt.Println("Pengeluaranmu     :", totalPengeluaran)
-		fmt.Println("Target kamu       :" , targetHemat)
+		fmt.Println("Target kamu       :", targetHemat)
 		fmt.Println("Yang tersisa      :", sisa)
 
 		if totalPengeluaran > targetHemat {
 			fmt.Println("duh kamu boros banget kak")
-		} else if totalPengeluaran <= targetHemat {
+		} else if totalPengeluaran < targetHemat {
 			fmt.Println("hebat, kamu hemat")
 		} else {
 			fmt.Println("huft, masih normal")
